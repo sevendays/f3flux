@@ -71,13 +71,16 @@ You only need to pass the constructor the path of your FluxBB installation. The 
 ### Useful objects
 
 After the bridge instantiation you've got a working DB\SQL connection to FluxBB's database:
+
     // $bridge->db is the db connection
     $bridge->db->exec('SELECT * FROM users LIMIT 10'); // hmmm no table prefix...
 
 Likewise, the  board configuration is stored in the `pun_config` array:
+
     $cookie_timeout = $bridge->pun_config['o_timeout_visit'];
     
 If the user is logged in (after a successful `login()` or `isLoggedIn()`) you've got his properties in an array:
+
     // $bridge->pun_user is the user array
     $user_id = $bridge->pun_user['id'];
     $username = $bridge->pun_user['username'];
