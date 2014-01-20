@@ -282,7 +282,7 @@ class Bridge {
 			setcookie($name, $value, $expire, $this->_cookie['path'].'; HttpOnly', $this->_cookie['domain'], $this->_cookie['secure']);
 	}
 	
-	function __construct($fluxbb_root, $is_vanilla)
+	function __construct($fluxbb_root, $is_vanilla=true)
 	{
 		if($is_vanilla === true) $this->vanilla_fluxbb = true;
 		
